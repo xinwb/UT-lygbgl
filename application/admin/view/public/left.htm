@@ -1,0 +1,77 @@
+<!-- Page Sidebar -->
+
+<div class="tpl-left-nav tpl-left-nav-hover">
+  
+  <div class="tpl-left-nav-list">
+    <ul class="tpl-left-nav-menu">
+      <li class="tpl-left-nav-item"> <a href="{:url('index/index')}" class="nav-link tpl-left-nav-link-list"> <i class="am-icon-home"></i>&nbsp; <span>干部测评</span> </a> </li>
+       
+      {if($yonghutype["group_id"]=="1")}
+      <li class="tpl-left-nav-item"> <a href="#" class="nav-link tpl-left-nav-link-list"> <i class="fa fa-address-book"></i>&nbsp; <span>信息管理</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i> </a>
+        <ul class="tpl-left-nav-sub-menu">
+          <li> 
+          <!-- <a href="{:url('article/add')}"> <i class="am-icon-angle-right"></i> <span>干部添加</span></a>  -->
+          <a href="{:url('article/lst')}"> <i class="am-icon-angle-right"></i> <span>信息查看</span></a> 
+          <a href="{:url('article/mysort')}"> <i class="am-icon-angle-right"></i> <span>信息排序</span></a>
+          <a href="{:url('article/mysearch')}"> <i class="am-icon-angle-right"></i> <span>信息查询</span></a>
+          <!--<a href="{:url('article/approval')}"> <i class="am-icon-angle-right"></i> <span>修改审核</span></a> -->
+          <!-- <a href="{:url('article/alladd')}"> <i class="am-icon-angle-right"></i> <span>干部信息导入</span></a>  -->
+        
+          </li>
+        </ul>
+      </li>
+      
+      <li class="tpl-left-nav-item"> <a href="#" class="nav-link tpl-left-nav-link-list"> <i class="fa fa-calendar"></i>&nbsp; <span>考核管理</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i> </a>
+        <ul class="tpl-left-nav-sub-menu">
+          <li> 
+          <a href="{:url('checkgl/add')}"> <i class="am-icon-angle-right"></i> <span>调查表生成</span></a> 
+          <a href="{:url('checkgl/lst')}"> <i class="am-icon-angle-right"></i> <span>调查表管理</span></a> 
+         </li>
+        </ul>
+      </li>
+      {/if}
+    {if($yonghutype["group_id"]=="1")}
+      <li class="tpl-left-nav-item"> <a href="#" class="nav-link tpl-left-nav-link-list"> <i class="fa fa-bar-chart"></i>&nbsp;<span>信息汇总</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i> </a>
+        <ul class="tpl-left-nav-sub-menu">
+          <li> 
+          <a href="{:url('summary/gerenlst')}"> <i class="am-icon-angle-right"></i> <span>信息汇总</span></a> 
+         </li>
+        </ul>
+      </li>
+   
+      {/if}
+      <li class="tpl-left-nav-item"> <a href="#" class="nav-link tpl-left-nav-link-list"> <i class="fa fa-user"></i>  &nbsp; <span>用户管理</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i> </a>
+        <ul class="tpl-left-nav-sub-menu">
+        
+          <li> 
+           {if($yonghutype["group_id"]=="1")}<a href="{:url('admin/lst')}"> <i class="am-icon-angle-right"></i> <span>用户列表</span></a> {/if}
+        <!--  <a href="{:url('auth_group/lst')}"> <i class="am-icon-angle-right"></i> <span>用户组管理</span></a> 
+          <a href="{:url('auth_rule/lst')}"> <i class="am-icon-angle-right"></i> <span>权限列表</span></a> 
+-->
+            <!-- {if($yonghutype["group_id"]=="1")} <a href="{:url('article/edit',array('id'=>$yonghutype2['artid']))}"><i class="am-icon-angle-right"></i> <span>个人资料</span></a>{/if} -->
+          <a href="{:url('admin/editpassword',array('id'=>$yonghuid))}"> <i class="am-icon-angle-right"></i> <span>修改密码</span></a> 
+             <a href="{:url('admin/record')}"> <i class="am-icon-angle-right"></i> <span>登录记录</span></a> 
+
+         </li>
+        </ul>
+      </li>
+       {if($yonghutype["group_id"]=="1")}
+       <li class="tpl-left-nav-item"> <a href="#" class="nav-link tpl-left-nav-link-list"> <i class="fa fa-cog"></i>  &nbsp; <span>系统设置</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i> </a>
+        <ul class="tpl-left-nav-sub-menu">
+        
+          <li> 
+          <a href="{:url('cate/lst')}"> <i class="am-icon-angle-right"></i> <span>部门管理</span></a> 
+          <a href="{:url('message/lst')}"> <i class="am-icon-angle-right"></i> <span>信息发布管理</span></a> 
+          <!--</i><a href="#"> <i class="am-icon-angle-right"></i> <span>参数设置</span></a> -->
+
+         </li>
+        </ul>
+      </li>
+     {/if}
+     <li class="tpl-left-nav-item"> <a href="{:url('admin/logout')}" class="nav-link tpl-left-nav-link-list"> <i class="am-icon-power-off"></i> <span>退出</span> </a> </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- /Page Sidebar -->
